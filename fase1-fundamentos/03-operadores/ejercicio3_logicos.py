@@ -14,12 +14,18 @@ id_maria = False
 edad_pedro = 16
 id_pedro = False
 
+pase_vip_luis = True
+ingreso_luis_vip = edad_luis >= 18 or pase_vip_luis
+
+lista_negra_pedro = True 
+
+
 ingreso1= edad_ana>=18 and id_ana 
-ingreso2= edad_luis>=18 and id_luis 
+ingreso_luis_vip = edad_luis >= 18 or pase_vip_luis
 ingreso3= edad_maria>=18 and id_maria
-ingreso4= edad_pedro>=18 and id_pedro
+puede_entrar_not = not lista_negra_pedro
 
 print("pueden ingresar ana: ",ingreso1)
-print("pueden ingresar luis: ",ingreso2)
+print("¿Puede ingresar Luis con VIP?", ingreso_luis_vip)
 print("pueden ingresar maria: ",ingreso3)
-print("pueden ingresar pedro: ",ingreso4)
+print("¿Puede entrar Pedro? (no lista negra)", puede_entrar_not)
