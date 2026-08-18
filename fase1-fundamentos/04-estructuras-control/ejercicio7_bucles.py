@@ -19,3 +19,26 @@ while intento != numero_secreto:
     if intento != 7:
         print("vuelve a intentarlo")
 print("Correcto")
+
+     
+
+
+print("---adivina con limite de intentos---")
+numero_secretos = 5
+intento = 0
+intentos = 0
+
+while intentos < 3:
+     intento = int (input("adivina el numero: "))
+     
+     if intento == 5:
+         print ("correcto")
+         break
+     else: 
+         intentos += 1
+         print ("vuelve a intentarlo, tienes ", 3 - intentos  ,"intentos") 
+
+     if intentos == 3:
+         print ("perdiste, el numero era ", numero_secretos)
+
+
