@@ -1,12 +1,12 @@
 
+edad = int(input("Cuantos años tienes"))
+respuesta = input(" tienes identificacion (si/no): ")
+tienes_id = respuesta == "si" 
+
 
 def verificar_entrada (edad, id):
    if edad>= 18 and id:
-      print ("puede entrar")
+      return True
    else:
-     print (" no puede entrar")
+      return False
 
-verificar_entrada (20,True)
-verificar_entrada (17,True)
-verificar_entrada (22,False)
-verificar_entrada (16,False)
