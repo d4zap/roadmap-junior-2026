@@ -1,5 +1,5 @@
 
-edad = int(input("Cuantos años tienes"))
+edad = int(input("Cuantos años tienes: "))
 respuesta = input(" tienes identificacion (si/no): ")
 tienes_id = respuesta == "si" 
 
@@ -10,3 +10,9 @@ def verificar_entrada (edad, id):
    else:
       return False
 
+resultado = verificar_entrada(edad, id)
+
+if resultado:
+   print ("Bienvenido, puede entrar")
+else:
+   print ("lo sentimos, no puede entrar")   
