@@ -17,25 +17,48 @@
 #Todo esto dentro de una función llamada registrar_usuario() que retorne un diccionario con todos los datos (nombre, edad, IMC, categoría, puede_inscribirse)
 #Llamar la función e imprimir un reporte final con todos los datos del usuario
 
-Nombre = input("ingrese su nombre: ")
+nombre = input("ingrese su nombre: ")
 
-Edad = int(input("Ingresar tu edad: "))
+edad = int(input("Ingresar tu edad: "))
 
-PesoKG = int(input("Ingresa tu peso: "))
+pesoKG = int(input("Ingresa tu peso en KG: "))
 
-Altura = float(input("Ingresa tu estatura en metros: "))
+altura = float(input("Ingresa tu estatura en metros: "))
 
-IMC= PesoKG / (Altura*Altura)
+IMC= pesoKG / (altura*altura)
 
-print(IMC)
 
 def autoIMC ():
     if IMC<=18.5: 
      print("Bajo peso")
-    elif IMC>18.5 and IMC<24.9:
+    elif IMC>18.5 and IMC<=24.9:
      print("peso normal")
-    elif IMC>25 and IMC<29.9:
+    elif IMC>=25 and IMC<29.9:
         print("sobrepeso")
     else :
         print("obesidad")     
-    
+
+def Medad ():        
+    if edad >15:
+       return True
+    else:
+       return False 
+
+resultado = Medad()
+
+
+def registrar_usuario():
+
+ print(f"Su nombre es: {nombre} ")
+ print(f"Su edad es: {edad} ")
+ print (f"su IMC es: {IMC} ")
+ print(f"Su peso es: {pesoKG}kg ")
+
+ if resultado:
+   print ("Bienvenido, puede entrar")
+ else:
+   print ("lo sentimos, no puede entrar")   
+
+ print(f"Su estatura es: {altura} ")
+ autoIMC()
+
