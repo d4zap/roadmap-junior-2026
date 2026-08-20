@@ -17,48 +17,33 @@
 #Todo esto dentro de una función llamada registrar_usuario() que retorne un diccionario con todos los datos (nombre, edad, IMC, categoría, puede_inscribirse)
 #Llamar la función e imprimir un reporte final con todos los datos del usuario
 
-nombre = input("ingrese su nombre: ")
-
-edad = int(input("Ingresar tu edad: "))
-
-pesoKG = int(input("Ingresa tu peso en KG: "))
-
-altura = float(input("Ingresa tu estatura en metros: "))
-
-IMC= pesoKG / (altura*altura)
-
-
-def autoIMC ():
-    if IMC<=18.5: 
-     print("Bajo peso")
-    elif IMC>18.5 and IMC<=24.9:
-     print("peso normal")
-    elif IMC>=25 and IMC<29.9:
-        print("sobrepeso")
-    else :
-        print("obesidad")     
-
-def Medad ():        
-    if edad >15:
-       return True
-    else:
-       return False 
-
-resultado = Medad()
-
-
 def registrar_usuario():
+    nombre = input("ingrese su nombre: ")
+    edad = int(input("Ingresar tu edad: "))
+    pesoKG = int(input("Ingresa tu peso en KG: "))
+    altura = float(input("Ingresa tu estatura en metros: "))
 
- print(f"Su nombre es: {nombre} ")
- print(f"Su edad es: {edad} ")
- print (f"su IMC es: {IMC} ")
- print(f"Su peso es: {pesoKG}kg ")
+    IMC= pesoKG / (altura*altura)
 
- if resultado:
-   print ("Bienvenido, puede entrar")
- else:
-   print ("lo sentimos, no puede entrar")   
+    if IMC<=18.5: 
+        categoria ="Bajo peso"
+        
+    elif IMC>18.5 and IMC<=24.9:
+        categoria ="peso normal"
+    elif IMC>=25 and IMC<29.9:
+           categoria ="sobre peso"
+    else :
+           categoria ="obesidad"
 
- print(f"Su estatura es: {altura} ")
- autoIMC()
+    puede_inscribirse= edad > 15 and IMC >=10
 
+    return{
+     "nombre": nombre,
+     "edad": edad,
+     "IMC": IMC,
+     "categoria": categoria,
+     "puede_inscribirse": puede_inscribirse,
+       
+    }       
+datos = registrar_usuario()
+print(datos)
