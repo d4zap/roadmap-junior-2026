@@ -9,7 +9,6 @@ cliente = {
     "valor": 0
 
 }
-
 print(cliente["nombre"])
 
 print(cliente["servicio"])
@@ -20,3 +19,14 @@ cliente["valor"] = 150000
 
 
 print(cliente)
+
+
+clientes = [
+    {"nombre": "David", "servicio": "SOAT", "estado": "pendiente"},
+    {"nombre": "Ana", "servicio": "Tecnomecánica", "estado": "pendiente"},
+    {"nombre": "Luis", "servicio": "SOAT", "estado": "procesado"}
+]
+
+print(clientes[1]["nombre"])
+
+
