@@ -30,3 +30,11 @@ clientes = [
 print(clientes[1]["nombre"])
 
 
+clientes = [
+    {"nombre": "David", "servicio": "SOAT", "estado": "pendiente"},
+    {"nombre": "Ana", "servicio": "Tecnomecanica", "estado": "pendiente"},
+    {"nombre": "Luis", "servicio": "SOAT", "estado": "procesado"}
+]
+
+for cliente in clientes:
+    print(cliente["nombre"], "-", cliente["servicio"])
