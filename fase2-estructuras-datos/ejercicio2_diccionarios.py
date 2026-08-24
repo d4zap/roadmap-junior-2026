@@ -38,3 +38,13 @@ clientes = [
 
 for cliente in clientes:
     print(cliente["nombre"], "-", cliente["servicio"])
+
+print()
+print()
+print()
+print()
+
+for cliente in clientes:
+
+    if cliente["servicio"] == "SOAT" and cliente["estado"] == "pendiente":
+      print(cliente)   
