@@ -66,12 +66,33 @@ if resultado is None:
     print("La cédula 99999 no está registrada en el sistema")
 else:
     print("Cliente encontrado:", resultado["nombre"], "-",resultado["servicio"])        
-
-
                     
        
 print(buscar_cliente("11115"))
 print(buscar_cliente("11114"))
 print(buscar_cliente("99999"))
 
+print("Total de clientes registrados:", len(clientes))
 
+pendientes = 0
+procesados = 0
+for cliente in clientes:
+    if cliente["estado"]=="pendiente":
+        pendientes +=1
+    else:
+        procesados +=1
+
+print("Pendientes:", pendientes)
+print("Procesados:", procesados)
+
+valor_servicio = 0
+
+for cliente in clientes:
+    if cliente["estado"] == "procesado":
+        valor_servicio += cliente["valor"]
+          
+print("Total recaudado:", valor_servicio)
+
+print(len(placas))
+
+print("Total de placas únicas:", len(placas))
